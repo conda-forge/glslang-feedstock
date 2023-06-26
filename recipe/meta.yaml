@@ -12,6 +12,7 @@ source:
     - 3243.patch
 
 build:
+  skip: true  # [py!=310]
   number: 1
   run_exports:
     # They seem to use so names with the major version, so lets stick with that
@@ -28,9 +29,8 @@ requirements:
     - make                     # [unix]
     - sysroot_linux-64 2.17    # [linux]
     # Needed as a build tool
-    - python 3.10
+    - python
   host:
-    - python 3.10
     - spirv-tools
 
 test:
