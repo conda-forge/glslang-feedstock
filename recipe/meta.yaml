@@ -12,7 +12,7 @@ source:
     - 3243.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # They seem to use so names with the major version, so lets stick with that
     - {{ pin_subpackage('glslang', 'x') }}
