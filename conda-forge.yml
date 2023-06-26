@@ -3,3 +3,9 @@ os_version:
 build_platform:
   linux_aarch64: linux_64
   linux_ppc64le: linux_64
+github:
+  branch_name: main
+  tooling_branch_name: main
+conda_build:
+  error_overlinking: true
+conda_forge_output_validation: true
