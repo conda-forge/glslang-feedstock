@@ -30,6 +30,7 @@ requirements:
     # Needed as a build tool
     - python 3.10
   host:
+    - python 3.10
     - spirv-tools
 
 test:
