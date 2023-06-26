@@ -31,6 +31,7 @@ requirements:
     # Needed as a build tool
     - python
   host:
+    - python
     - spirv-tools
 
 test:
