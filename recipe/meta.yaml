@@ -12,7 +12,8 @@ source:
     - 3243.patch
 
 build:
-  number: 0
+  skip: true  # [py!=310]
+  number: 1
   run_exports:
     # They seem to use so names with the major version, so lets stick with that
     - {{ pin_subpackage('glslang', 'x') }}
@@ -28,8 +29,9 @@ requirements:
     - make                     # [unix]
     - sysroot_linux-64 2.17    # [linux]
     # Needed as a build tool
-    - python *
+    - python
   host:
+    - python
     - spirv-tools
 
 test:
