@@ -1,13 +1,13 @@
-os_version:
-  linux_64: cos7
 build_platform:
   linux_aarch64: linux_64
   linux_ppc64le: linux_64
   osx_arm64: osx_64
-github:
-  branch_name: main
-  tooling_branch_name: main
 conda_build:
   error_overlinking: true
 conda_forge_output_validation: true
+github:
+  branch_name: main
+  tooling_branch_name: main
+os_version:
+  linux_64: cos7
 test: native_and_emulated
