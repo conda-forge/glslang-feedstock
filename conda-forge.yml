@@ -10,4 +10,7 @@ github:
   tooling_branch_name: main
 os_version:
   linux_64: cos7
+provider:
+  linux_aarch64: azure
+  linux_ppc64le: travis
 test: native_and_emulated
