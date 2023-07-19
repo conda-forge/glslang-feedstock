@@ -7,9 +7,6 @@ package:
 source:
   url: https://github.com/KhronosGroup/glslang/archive/{{ version }}.tar.gz
   sha256: 45e0c7efad184206495aa1888c9008e168628fd1d3867a6975a7cd61dd11f53f
-  patches:
-    # https://github.com/KhronosGroup/glslang/pull/3243
-    - 3243.patch
 
 build:
   skip: true  # [py!=310]
