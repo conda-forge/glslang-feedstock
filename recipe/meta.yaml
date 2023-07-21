@@ -1,4 +1,4 @@
-{% set version = "12.2.0" %}
+{% set version = "12.3.1" %}
 
 package:
   name: glslang
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://github.com/KhronosGroup/glslang/archive/{{ version }}.tar.gz
-  sha256: 870d17030fda7308c1521fb2e01a9e93cbe4b130bc8274e90d00e127432ab6f6
+  sha256: a57836a583b3044087ac51bb0d5d2d803ff84591d55f89087fc29ace42a8b9a8
   patches:
     # https://github.com/KhronosGroup/glslang/pull/3243
     - 3243.patch
 
 build:
   skip: true  # [py!=310]
-  number: 1
+  number: 0
   run_exports:
     # They seem to use so names with the major version, so lets stick with that
     - {{ pin_subpackage('glslang', 'x') }}
