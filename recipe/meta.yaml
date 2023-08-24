@@ -1,4 +1,4 @@
-{% set version = "12.3.1" %}
+{% set version = "13.0.0" %}
 
 package:
   name: glslang
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/KhronosGroup/glslang/archive/{{ version }}.tar.gz
-  sha256: a57836a583b3044087ac51bb0d5d2d803ff84591d55f89087fc29ace42a8b9a8
+  sha256: bcda732434f829aa74414ea0e06d329ec8ac28637c38a0de45e17c8fd25a4715
 
 build:
   skip: true  # [py!=310]
