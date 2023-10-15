@@ -6,6 +6,7 @@ if errorlevel 1 exit 1
 :REM I'm really not sure why I am not able to utilize the shared libraries
 :REM maybe they just never tested shared libraries upstream
 cmake -GNinja ^
+  -DALLOW_EXTERNAL_SPIRV_TOOLS=ON ^
   -DCMAKE_BUILD_TYPE=Release ^
   -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
   -DBUILD_SHARED_LIBS=OFF ^
