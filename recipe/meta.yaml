@@ -1,4 +1,4 @@
-{% set version = "14.1.0" %}
+{% set version = "14.2.0" %}
 
 package:
   name: glslang
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/KhronosGroup/glslang/archive/{{ version }}.tar.gz
-  sha256: b5e4c36d60eda7613f36cfee3489c6f507156829c707e1ecd7f48ca45b435322
+  sha256: 14a2edbb509cb3e51a9a53e3f5e435dbf5971604b4b833e63e6076e8c0a997b5
 
 build:
   skip: true  # [py!=310]
@@ -20,18 +20,17 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake
     - ninja                    # [win]
     - make                     # [unix]
-    - sysroot_linux-64 2.17    # [linux]
     # Needed as a build tool
     - python
   host:
     - python
     - spirv-tools
   run:
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
 test:
   commands:
