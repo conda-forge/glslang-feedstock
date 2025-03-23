@@ -1,0 +1,38 @@
+From a9076659aeaa12a71242c806fd3d136b8e5d13b6 Mon Sep 17 00:00:00 2001
+From: Mark Harfouche <mark.harfouche@gmail.com>
+Date: Sun, 23 Mar 2025 19:22:13 -0400
+Subject: [PATCH] Disable SPV_ENV_VULKAN_1_4 while wiating for spirv-tools 2025
+
+---
+ SPIRV/SpvTools.cpp | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/SPIRV/SpvTools.cpp b/SPIRV/SpvTools.cpp
+index a7a1a73..6209659 100644
+--- a/SPIRV/SpvTools.cpp
++++ b/SPIRV/SpvTools.cpp
+@@ -61,8 +61,8 @@ spv_target_env MapToSpirvToolsEnv(const SpvVersion& spvVersion, spv::SpvBuildLog
+         case EShTargetSpv_1_2:
+         case EShTargetSpv_1_3:
+             return spv_target_env::SPV_ENV_VULKAN_1_1;
+-        case EShTargetSpv_1_4:
+-            return spv_target_env::SPV_ENV_VULKAN_1_1_SPIRV_1_4;
++        // case EShTargetSpv_1_4:
++        //     return spv_target_env::SPV_ENV_VULKAN_1_1_SPIRV_1_4;
+         default:
+             logger->missingFunctionality("Target version for SPIRV-Tools validator");
+             return spv_target_env::SPV_ENV_VULKAN_1_1;
+@@ -71,8 +71,8 @@ spv_target_env MapToSpirvToolsEnv(const SpvVersion& spvVersion, spv::SpvBuildLog
+         return spv_target_env::SPV_ENV_VULKAN_1_2;
+     case glslang::EShTargetVulkan_1_3:
+         return spv_target_env::SPV_ENV_VULKAN_1_3;
+-    case glslang::EShTargetVulkan_1_4:
+-        return spv_target_env::SPV_ENV_VULKAN_1_4;
++    // case glslang::EShTargetVulkan_1_4:
++    //     return spv_target_env::SPV_ENV_VULKAN_1_4;
+     default:
+         break;
+     }
+-- 
+2.43.0
+

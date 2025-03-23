@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/KhronosGroup/glslang/archive/{{ version }}.tar.gz
   sha256: 4bdcd8cdb330313f0d4deed7be527b0ac1c115ff272e492853a6e98add61b4bc
+  patches:
+    - 0001-Disable-SPV_ENV_VULKAN_1_4-while-wiating-for-spirv-t.patch
 
 build:
   skip: true  # [py!=310]
