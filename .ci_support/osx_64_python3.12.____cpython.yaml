@@ -27,7 +27,7 @@ pin_run_as_build:
 python:
 - 3.12.* *_cpython
 spirv_tools:
-- '2024'
+- '2025'
 target_platform:
 - osx-64
 zip_keys:
