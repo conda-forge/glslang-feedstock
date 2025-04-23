@@ -9,7 +9,6 @@ source:
   sha256: 4bdcd8cdb330313f0d4deed7be527b0ac1c115ff272e492853a6e98add61b4bc
 
 build:
-  skip: true  # [py!=310]
   number: 2
   run_exports:
     # They seem to use so names with the major version, so lets stick with that
@@ -25,7 +24,7 @@ requirements:
     - cmake
     - ninja
     # Needed as a build tool
-    - python
+    - python 3.12
   host:
     - spirv-tools
   run:
