@@ -20,11 +20,10 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
     - cmake
-    - ninja                    # [win]
-    - make                     # [unix]
+    - ninja
     # Needed as a build tool
     - python
   host:
