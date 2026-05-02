@@ -1,4 +1,4 @@
-{% set version = "16.2.0" %}
+{% set version = "16.3.0" %}
 
 package:
   name: glslang
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://github.com/KhronosGroup/glslang/archive/{{ version }}.tar.gz
-  sha256: 01985335785c97906a91afe3cb5ee015997696181ec6c125bab5555602ba08e2
+  sha256: efff5a15258dce1ca2d323bf64c974f5fca03778174615dbc30c8d36db645bf5
 
 build:
   skip: true  # [py!=312]
-  number: 1
+  number: 0
   run_exports:
     # They seem to use so names with the major version, so lets stick with that
     - {{ pin_subpackage('glslang', 'x') }}
