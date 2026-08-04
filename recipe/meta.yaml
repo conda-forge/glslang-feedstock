@@ -9,8 +9,7 @@ source:
   sha256: 01af17195fbeb59e39e31e9506de35bb39dfd35807ea0c9a1a99d7d1183ddd45
 
 build:
-  skip: true  # [py!=312]
-  number: 0
+  number: 1
   run_exports:
     # They seem to use so names with the major version, so lets stick with that
     - {{ pin_subpackage('glslang', 'x') }}
@@ -25,7 +24,7 @@ requirements:
     - cmake
     - ninja
     # Needed as a build tool
-    - python 3.12
+    - python
   host:
     - spirv-tools
   run:
